@@ -20,12 +20,13 @@ Testei com Torto Arado, Dom Casmurro e um ISBN da Companhia das Letras. A Brasil
 
 ## O que fica para depois
 
-Listas, curtidas, comentários, importação do Goodreads, recomendações e os apps de iOS e Android.
+Curtidas, comentários, importação do Goodreads, recomendações e os apps de iOS e Android.
 
 ## Decisões tomadas
 
 - Site antes do iOS.
 - SvelteKit, Convex, Effect e Better Auth.
+- Três telas para as leituras, cada uma com um papel. O Diário acompanha o progresso e tem cara de caderno: a resenha vem em destaque e a data fica grande na margem. A Estante mostra listas que você cria, com os livros como lombadas. O Ano em leitura junta os números do ano, um gráfico por mês e uma tabela. O Diário entra primeiro; as outras duas vêm depois. O protótipo das três está no branch `prototype/diario-variantes`.
 
 ## Decisões em aberto
 
