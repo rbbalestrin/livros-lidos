@@ -1,0 +1,55 @@
+{
+	"name": "livros-lidos",
+	"version": "0.0.1",
+	"private": true,
+	"type": "module",
+	"imports": {
+		"#lib": "./src/lib/index.js",
+		"#lib/*": "./src/lib/*",
+		"#convex/*": "./convex/*"
+	},
+	"scripts": {
+		"dev": "vite dev",
+		"build": "vite build",
+		"preview": "vite preview",
+		"prepare": "svelte-kit sync || echo ''",
+		"check": "paraglide-js compile --project ./project.inlang --outdir ./src/lib/paraglide --strategy url cookie baseLocale && svelte-kit sync && svelte-check --tsconfig ./tsconfig.json && tsc -p convex --noEmit",
+		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+		"test:unit": "vitest",
+		"test": "vitest run",
+		"lint": "prettier --check . && eslint .",
+		"format": "prettier --write .",
+		"convex": "CONVEX_AGENT_MODE=anonymous convex dev"
+	},
+	"devDependencies": {
+		"@eslint/js": "^10.0.1",
+		"@inlang/paraglide-js": "^2.18.2",
+		"@sveltejs/adapter-auto": "^8.0.0",
+		"@sveltejs/kit": "^3.0.0",
+		"@sveltejs/vite-plugin-svelte": "^7.2.0",
+		"@tailwindcss/vite": "^4.3.0",
+		"@types/node": "^24",
+		"eslint": "^10.4.1",
+		"eslint-config-prettier": "^10.1.8",
+		"eslint-plugin-svelte": "^3.19.0",
+		"globals": "^17.6.0",
+		"prettier": "^3.8.3",
+		"prettier-plugin-svelte": "^4.1.0",
+		"prettier-plugin-tailwindcss": "^0.8.0",
+		"svelte": "^5.57.2",
+		"svelte-check": "^4.6.0",
+		"tailwindcss": "^4.3.0",
+		"typescript": "^6.0.3",
+		"typescript-eslint": "^8.60.1",
+		"vite": "^8.3.0",
+		"vitest": "^4.1.8"
+	},
+	"dependencies": {
+		"@convex-dev/better-auth": "0.13.0",
+		"@mmailaender/convex-better-auth-svelte": "0.10.0",
+		"better-auth": "1.7.23",
+		"convex": "1.50.0",
+		"convex-svelte": "0.15.1",
+		"effect": "4.1.4"
+	}
+}

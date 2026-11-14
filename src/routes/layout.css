@@ -1,0 +1,36 @@
+@import 'tailwindcss';
+
+@theme {
+	--color-paper: #f6f1e7;
+	--color-card: #fffdf8;
+	--color-ink: #2b2620;
+	--color-muted: #736a5e;
+	--color-line: #e3d9c8;
+	--color-accent: #b4532a;
+	--color-accent-dark: #8f3f1e;
+	--color-star: #d49a1f;
+	--font-serif: 'Iowan Old Style', 'Palatino Linotype', Palatino, Georgia, serif;
+}
+
+@layer base {
+	body {
+		@apply bg-paper font-sans text-ink antialiased;
+	}
+	h1,
+	h2,
+	h3 {
+		@apply font-serif;
+	}
+}
+
+@utility btn {
+	@apply inline-flex items-center justify-center gap-2 rounded-full bg-accent px-4 py-2 text-sm font-medium text-white transition hover:bg-accent-dark disabled:opacity-50;
+}
+
+@utility btn-ghost {
+	@apply inline-flex items-center justify-center rounded-full px-3 py-2 text-sm text-muted transition hover:bg-line/60 hover:text-ink;
+}
+
+@utility field {
+	@apply w-full rounded-lg border border-line bg-card px-3 py-2 text-ink outline-none placeholder:text-muted/70 focus:border-accent focus:ring-2 focus:ring-accent/20;
+}

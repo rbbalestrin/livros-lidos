@@ -4,25 +4,32 @@ A v1 é um site em que dá para registrar leituras e acompanhar outras pessoas l
 
 ## O que entra
 
-**Conta.** Login e um nome de usuário único. Cada conta tem um perfil público com estante e diário.
+**Conta.** Login e um nome de usuário único. Cada conta tem um perfil público com estante e diário. Feito: cadastro e login por e-mail. O nome de usuário é gerado a partir do nome e ainda não dá para editar.
 
-**Busca de livros.** A busca consulta mais de uma fonte e junta os resultados pelo ISBN. Quando duas fontes descrevem o mesmo livro, guardamos um registro só e anotamos de onde veio cada campo. As fontes candidatas são Open Library, Google Books e a API de ISBN da BrasilAPI. Ainda não testei nenhuma delas com livros brasileiros.
+**Busca de livros.** A busca consulta mais de uma fonte e junta os resultados pelo ISBN. Quando duas fontes descrevem o mesmo livro, guardamos um registro só e anotamos de onde veio cada campo. Feito com Open Library e BrasilAPI. Google Books só entra com chave de API, porque a cota anônima dele é zero.
 
-**Diário.** Registrar uma leitura pede só o livro e a data em que você terminou. Nota de meia em meia estrela, resenha e marca de releitura são opcionais. O mesmo livro pode aparecer várias vezes no diário.
+Testei com Torto Arado, Dom Casmurro e um ISBN da Companhia das Letras. A BrasilAPI acerta editora e número de páginas das edições brasileiras, mas às vezes guarda o título em maiúsculas e sem acento. Nesses casos vale o título de outra fonte.
 
-**Estante.** Cada livro tem um estado: quero ler, lendo ou lido. Marcar como lido abre o registro no diário.
+**Diário.** Registrar uma leitura pede só o livro e a data em que você terminou. Nota de meia em meia estrela, resenha e marca de releitura são opcionais. O mesmo livro pode aparecer várias vezes no diário. Feito.
 
-**Seguir e feed.** Você segue alguém sem precisar de aprovação. O feed mostra as entradas de diário de quem você segue, da mais nova para a mais antiga.
+**Estante.** Cada livro tem um estado: quero ler, lendo ou lido. Marcar como lido abre o registro no diário. Por enquanto só existe o lado de dentro: registrar uma leitura marca o livro como lido, mas a tela da estante ainda não existe.
 
-**Idiomas.** A interface sai em português do Brasil e inglês. Título e sinopse aparecem no idioma em que a fonte entrega.
+**Seguir e feed.** Você segue alguém sem precisar de aprovação. O feed mostra as entradas de diário de quem você segue, da mais nova para a mais antiga. Falta fazer.
+
+**Idiomas.** A interface sai em português do Brasil e inglês. Título e sinopse aparecem no idioma em que a fonte entrega. Feito.
 
 ## O que fica para depois
 
 Listas, curtidas, comentários, importação do Goodreads, recomendações e os apps de iOS e Android.
 
+## Decisões tomadas
+
+- Site antes do iOS.
+- SvelteKit, Convex, Effect e Better Auth.
+
 ## Decisões em aberto
 
-- Backend. A recomendação atual é Convex com SvelteKit e Effect. Ainda não está fechada.
 - Perfil privado. Todo perfil é público na v1, ou já precisa existir a opção de fechar?
 - Denúncia e bloqueio. Resenha aparece no feed de outras pessoas, então algum mínimo deve entrar.
 - Spoiler. Marcar uma resenha como spoiler custa pouco e importa muito em livro.
+- Hospedagem. Nada foi publicado ainda. O site e a Convex rodam só na máquina local.
