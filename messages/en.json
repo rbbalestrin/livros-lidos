@@ -41,6 +41,17 @@
 	"diary_reread": "reread",
 	"diary_delete": "Delete",
 	"diary_delete_confirm": "Delete this reading from your diary?",
+	"diary_count": [
+		{
+			"declarations": ["input count", "local countPlural = count: plural"],
+			"selectors": ["countPlural"],
+			"match": {
+				"countPlural=one": "{count} reading",
+				"countPlural=other": "{count} readings"
+			}
+		}
+	],
+	"diary_delete_label": "Delete your reading of {title}",
 	"rating_label": "{stars} out of 5 stars",
 	"language_switch": "Português"
 }

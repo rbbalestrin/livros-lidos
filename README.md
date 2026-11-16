@@ -38,10 +38,10 @@ pnpm dev               # http://localhost:5173
 
 ## Fontes do catálogo
 
-| Fonte | Para que serve | Chave |
-| --- | --- | --- |
-| Open Library | Busca por texto e capas | Não precisa |
-| BrasilAPI (ISBN) | Editora, páginas e ano de edições brasileiras | Não precisa |
-| Google Books | Mais um ponto de cruzamento | `GOOGLE_BOOKS_API_KEY` no Convex; sem ela, a fonte fica de fora |
+| Fonte            | Para que serve                                | Chave                                                           |
+| ---------------- | --------------------------------------------- | --------------------------------------------------------------- |
+| Open Library     | Busca por texto e capas                       | Não precisa                                                     |
+| BrasilAPI (ISBN) | Editora, páginas e ano de edições brasileiras | Não precisa                                                     |
+| Google Books     | Mais um ponto de cruzamento                   | `GOOGLE_BOOKS_API_KEY` no Convex; sem ela, a fonte fica de fora |
 
 Quando duas fontes descrevem o mesmo ISBN, o livro vira um registro só e cada campo guarda de qual fonte veio. A regra está em `src/lib/catalog/merge.ts`.

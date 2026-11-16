@@ -41,6 +41,17 @@
 	"diary_reread": "releitura",
 	"diary_delete": "Apagar",
 	"diary_delete_confirm": "Apagar esta leitura do diário?",
+	"diary_count": [
+		{
+			"declarations": ["input count", "local countPlural = count: plural"],
+			"selectors": ["countPlural"],
+			"match": {
+				"countPlural=one": "{count} leitura",
+				"countPlural=other": "{count} leituras"
+			}
+		}
+	],
+	"diary_delete_label": "Apagar a leitura de {title}",
 	"rating_label": "{stars} de 5 estrelas",
 	"language_switch": "English"
 }
